@@ -3,7 +3,7 @@ import * as notesController from '../controllers/notes.controller.js'
 
 const router = Router();
 
-router.post('/send-notes',notesController.sendNotes);
+router.post('/create-note',notesController.createNote);
 
 
 export default router;
