@@ -4,7 +4,9 @@ import * as notesController from '../controllers/notes.controller.js'
 const router = Router();
 
 router.post('/create-note',notesController.createNote);
-router.get('/read-note',notesController.readNote);
+router.get('/get-notes',notesController.getNotes);
+router.get('/search',notesController.searchNotes);
+router.put('/update/:id',notesController.updateNotes);
 
 
 export default router;
