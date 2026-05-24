@@ -7,6 +7,6 @@ router.post('/create-note',notesController.createNote);
 router.get('/get-notes',notesController.getNotes);
 router.get('/search',notesController.searchNotes);
 router.put('/update/:id',notesController.updateNotes);
-
+router.delete('/delete/:id',notesController.deleteNotes);
 
 export default router;

@@ -95,3 +95,16 @@ export async function updateNotes(req,res){
     res.status(500).json({ success: false, message: err.message });
   }
 }
+
+export async function deleteNotes(req,res){
+  try{
+    const id = req.params.id;
+    const note = await notesModel.findByIdAndDelete(id);
+    if(!note){
+      return res.status(403).json({ message: "Note not found" });
+    }
+    res.status(200).json({message:"Note deleted successfully",note});
+  } catch(err){
+     res.status(500).json({ success: false, message: err.message });
+  }
+}
